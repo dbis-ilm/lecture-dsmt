@@ -1,20 +1,6 @@
 import networkx as nx
 import re
 
-from itertools import chain, combinations
-
-
-def powerset(s):
-    return chain.from_iterable(combinations(s, r) for r in range(len(s)+1))
-
-
-def neighbors(G, N):
-    nbs = set()
-    for node in N:
-        nbs.update(G.neighbors(node))
-
-    return nbs
-
 
 small_G = nx.Graph()
 small_G.add_edge('1', 'A')
